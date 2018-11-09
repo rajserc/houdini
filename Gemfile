@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.7'
 gem 'rake'
-gem 'rails', '3.2.22.5'
+gem 'rails', '~> 4'
 gem 'rails_12factor'
 # https://stripe.com/docs/api
 gem 'stripe'
@@ -26,8 +26,7 @@ gem 'test-unit', '~> 3.0'
 gem 'hamster'
 
 gem 'aws-ses'
-gem 'aws-sdk'
-
+gem 'aws-sdk', '~> 1'
 # for blocking ip addressses
 gem 'rack-attack'
 
@@ -41,7 +40,7 @@ gem 'sprockets'
 gem 'font_assets', '~> 0.1.14'
 
 # Database (postgres)
-gem 'pg' # Postgresql
+gem 'pg', '~> 0.11' # Postgresql
 gem 'qx', git: 'https://github.com/commitchange/ruby-qx.git'
 gem 'dalli'
 gem 'memcachier'
@@ -52,9 +51,6 @@ gem 'param_validation', git: 'https://github.com/commitchange/ruby-param-validat
 
 # Print colorized text lol
 gem 'colorize'
-
-# https://github.com/diogob/postgres-copy
-gem 'postgres-copy'
 
 # https://github.com/collectiveidea/delayed_job_active_record
 gem 'delayed_job_active_record'
@@ -104,7 +100,7 @@ gem 'table_print'
 
 gem 'bunny', '>= 2.6.3'
 
-gem 'rails-i18n', '~> 3.0.0' # For 3.x
+gem 'rails-i18n', '~> 4.0' # For 3.x
 gem 'i18n-js'
 gem 'countries'
 
@@ -139,7 +135,7 @@ end
 
 # Gems used for asset compilation
 gem 'sass', '3.2.19'
-gem 'sass-rails', '3.2.6'
+gem 'sass-rails'
 gem 'uglifier'
 
 # make logging less terrible in rails
@@ -157,9 +153,11 @@ group :production do
 end
 
 gem 'grape', '~> 1.1.0'
-gem 'grape-entity', git: 'https://github.com/ruby-grape/grape-entity.git', ref: '0e04aa561373b510c2486282979085eaef2ae663'
+gem 'grape-entity'
 gem 'grape-swagger'
 gem 'grape-swagger-entity'
 gem 'grape_url_validator'
 gem 'grape_logging'
 gem 'grape_devise', git: 'https://github.com/ericschultz/grape_devise.git'
+
+gem 'protected_attributes'
