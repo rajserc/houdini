@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.7'
 gem 'rake'
-gem 'rails', '~> 4'
+gem 'rails', '~> 4.1'
 gem 'rails_12factor'
 # https://stripe.com/docs/api
 gem 'stripe'
@@ -163,3 +163,5 @@ gem 'grape_logging'
 gem 'grape_devise', git: 'https://github.com/ericschultz/grape_devise.git'
 
 gem 'protected_attributes'
+
+gem 'rack-ssl'

@@ -97,14 +97,6 @@ class Campaign < ActiveRecord::Base
 		self
 	end
 
-	after_create do
-		user = self.profile.user
-		Role.create(name: :campaign_editor, user_id: user.id, host: self)
-		CampaignMailer.delay.creation_followup(self)
-		NonprofitAdminMailer.delay.supporter_fundraiser(self) unless QueryRoles.is_nonprofit_user?(user.id, self.nonprofit_id)
-		self
-	end
-
 	def set_defaults
 
 		self.total_supporters = 1

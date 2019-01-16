@@ -2,7 +2,7 @@
 require 'rails_helper'
 require 'controllers/support/shared_user_context'
 
-describe CampaignGiftOptionsController, :type => :controller do
+describe CampaignGiftOptionsController, :type => :request do
   describe 'authorization' do
     include_context :shared_user_context
     describe 'reject unauthorized' do

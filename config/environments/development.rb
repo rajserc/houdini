@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
   config.ignore_download_errors = false
 end
 
-Commitchange::Application.configure do
+Rails.application.configure do
 	# Settings specified here will take precedence over those in config/application.rb
 
 	# In the development environment your application's code is reloaded on
@@ -25,8 +25,8 @@ Commitchange::Application.configure do
 	# config.action_mailer.default_url_options = { host: 'commitchange.com' }
 	config.action_mailer.delivery_method = Settings.mailer.delivery_method.to_sym
 	config.action_mailer.smtp_settings = { address: Settings.mailer.address, port: Settings.mailer.port }
-        config.action_mailer.smtp_settings['user_name']= Settings.mailer.username if Settings.mailer.username
-        config.action_mailer.smtp_settings['password']= Settings.mailer.password if Settings.mailer.password
+	config.action_mailer.smtp_settings['user_name']= Settings.mailer.username if Settings.mailer.username
+	config.action_mailer.smtp_settings['password']= Settings.mailer.password if Settings.mailer.password
 
 	config.action_mailer.default_url_options = { host: Settings.mailer.host }
   # Don't care if the mailer can't send.
