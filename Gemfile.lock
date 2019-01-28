@@ -204,10 +204,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.12.2)
-      faraday (>= 0.7.4, < 1.0)
-    fb-channel-file (0.0.2)
-      rails (>= 3.0)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     font_assets (0.1.14)
       rack
     foreman (0.85.0)
@@ -339,8 +337,6 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_autoscale_agent (0.4.0)
-      activesupport (>= 3.2)
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
     railties (4.1.16)
@@ -452,7 +448,6 @@ GEM
     unf_ext (0.0.7.5)
     unicode-display_width (1.4.1)
     unicode_utils (1.4.0)
-    vcr (4.0.0)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -495,7 +490,6 @@ DEPENDENCIES
   dry-validation
   factory_bot
   factory_bot_rails
-  fb-channel-file
   font_assets (~> 0.1.14)
   foreman
   fullcontact
@@ -531,7 +525,6 @@ DEPENDENCIES
   rails (~> 4.1)
   rails-i18n (~> 4.0)
   rails_12factor
-  rails_autoscale_agent
   rake
   roadie-rails
   rspec
@@ -550,8 +543,6 @@ DEPENDENCIES
   timecop
   traceroute
   uglifier
-  unf
-  vcr
   webmock
 
 RUBY VERSION

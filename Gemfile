@@ -68,7 +68,6 @@ gem 'chronic'
 gem 'carrierwave'
 gem 'carrierwave-aws' # for uploading images to amazon s3
 gem 'mini_magick'
-gem 'unf'
 
 # https://github.com/jnunemaker/httparty
 gem 'httparty'
@@ -86,11 +85,6 @@ gem 'geocoder' # for adding latitude and longitude to location-based tables
 
 # https://github.com/buytruckload/nearest_time_zone
 gem 'nearest_time_zone' # for detecting timezone from lat/lng
-
-# Facebook
-# inserting a channel file with a long expiration for the FB SDK
-# https://developers.facebook.com/docs/reference/javascript/
-gem 'fb-channel-file'
 
 gem 'mail_view'
 
@@ -131,7 +125,6 @@ group :development, :ci, :test do
 end
 
 group :test do
-	gem 'vcr'
   gem 'webmock'
 end
 
@@ -147,12 +140,6 @@ gem 'config', '> 1.5'
 gem 'dry-validation' # used only for config validation
 
 gem 'foreman'
-
-
-
-group :production do
-  gem 'rails_autoscale_agent'
-end
 
 gem 'grape', '~> 1.1.0'
 gem 'grape-entity'
