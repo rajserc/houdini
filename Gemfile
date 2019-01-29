@@ -30,9 +30,6 @@ gem 'aws-sdk', '~> 1'
 # for blocking ip addressses
 gem 'rack-attack'
 
-# For modularizing javascript
-# https://github.com/browserify-rails/browserify-rails
-gem 'browserify-rails'
 gem 'sprockets'
 
 # for serving fonts on cdn
@@ -78,7 +75,7 @@ gem 'devise', '~> 3.5.0'
 gem 'devise-async'
 
 # https://github.com/airbrake/airbrake
-gem 'airbrake', '~> 6.2.1'
+gem 'airbrake', '~> 8.0.1'
 
 # http://www.rubygeocoder.com/
 gem 'geocoder' # for adding latitude and longitude to location-based tables
