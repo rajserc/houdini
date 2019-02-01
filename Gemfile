@@ -144,8 +144,4 @@ gem 'grape-swagger'
 gem 'grape-swagger-entity'
 gem 'grape_url_validator'
 gem 'grape_logging'
-#gem 'grape_devise', git: 'https://github.com/ericschultz/grape_devise.git'
-
-#gem 'protected_attributes'
-
-gem 'rack-ssl'
+gem 'grape_devise', path: 'gems/grape_devise'
