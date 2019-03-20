@@ -42,7 +42,7 @@ gem 'font_assets', '~> 0.1.14'
 
 # Database (postgres)
 gem 'pg' # Postgresql
-gem 'qx', git: 'https://github.com/commitchange/ruby-qx.git'
+gem 'qx', path: 'gems/ruby-qx'
 gem 'dalli'
 gem 'memcachier'
 
@@ -129,10 +129,10 @@ group :development, :ci, :test do
   gem 'factory_bot'
 	gem 'factory_bot_rails'
 	gem 'action_mailer_matchers'
+  gem 'simplecov', '~> 0.16.1', require: false
 end
 
 group :test do
-  gem 'codecov', require: false
 	gem 'vcr'
   gem 'webmock'
 end

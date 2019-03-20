@@ -9,6 +9,7 @@ COPY script/build/debian/postgres.sh myapp/script/build/debian/postgres.sh
 RUN myapp/script/build/debian/postgres.sh
 COPY script/build/debian/java.sh myapp/script/build/debian/java.sh
 RUN myapp/script/build/debian/java.sh
+COPY gems /myapp/gems/
 WORKDIR /myapp
 RUN groupadd -r -g 1000 $USER
 RUN useradd -r -m -g $USER -u 1000 $USER
@@ -23,6 +24,8 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 RUN chown -R $USER /myapp/Gemfile
 RUN chgrp -R $USER /myapp/Gemfile.lock
+RUN chown -R $USER /usr/local/bundle
+RUN chgrp -R $USER /usr/local/bundle
 USER $USER
 EXPOSE 5000
 CMD foreman start
