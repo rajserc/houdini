@@ -73,9 +73,6 @@ gem 'httparty'
 gem 'devise', '~> 4.4'
 gem 'devise-async'
 
-# https://github.com/airbrake/airbrake
-gem 'airbrake', '~> 8.0.1'
-
 # http://www.rubygeocoder.com/
 gem 'geocoder' # for adding latitude and longitude to location-based tables
 

@@ -57,11 +57,15 @@ describe ExportPayments do
         stub_const("DelayedJobHelper", double('delayed'))
         params =  { param1: 'pp' }.with_indifferent_access
 
-        expect(DelayedJobHelper).to receive(:enqueue_job).with(ExportPayments, :run_export, [nonprofit.id, params.to_json, user.id, 1])
+        expect(Export).to receive(:create).and_wrap_original {|m, *args|
+          e = m.call(*args) # get original create
+          expect(DelayedJobHelper).to receive(:enqueue_job).with(ExportPayments, :run_export, [nonprofit.id, params.to_json, user.id, e.id])  #add the enqueue
+          e
+        }
 
         ExportPayments.initiate_export(nonprofit.id, params, user.id)
         export = Export.first
-        expected_export = { id: 1,
+        expected_export = { id: export.id,
                             user_id: user.id,
                             nonprofit_id: nonprofit.id,
                             status: 'queued',

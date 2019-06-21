@@ -488,8 +488,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_mailer_matchers
-  airbrake (~> 8.0.1)
+  action_mailer_matchers  
   aws-sdk (~> 1)
   aws-ses
   binding_of_caller
