@@ -16,7 +16,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: devindiabenefits
+  database: devdbindiabenefits1
   pool: 5
   username: postgres
   password: yMC1OeDvyfAILysWMUa6
@@ -25,7 +25,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: devindiabenefits
+  database: devdbindiabenefits2
   pool: 5
   username: postgres
   password: yMC1OeDvyfAILysWMUa6
@@ -33,7 +33,7 @@ test:
 ci:
   adapter: postgresql
   encoding: unicode
-  database: devindiabenefits
+  database: devdbindiabenefits3
   pool: 5
   username: postgres
   password: yMC1OeDvyfAILysWMUa6
@@ -62,7 +62,7 @@ ci:
 production:
   adapter: postgresql
   encoding: unicode
-  database: devindiabenefits
+  database: devdbindiabenefits4
   pool: 5
   username: postgres
   password: yMC1OeDvyfAILysWMUa6
@@ -70,7 +70,7 @@ production:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: devindiabenefits
+  database: devdbindiabenefits5
   pool: 5
   username: postgres
   password: yMC1OeDvyfAILysWMUa6

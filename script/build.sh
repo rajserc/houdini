@@ -5,7 +5,7 @@
 echo $HOUDINI_WATCH
 set -e
 set -o pipefail
-export DATABASE_URL=${BUILD_DATABASE_URL:-postgres://admin:password@db/commitchange_development}
+export DATABASE_URL=${BUILD_DATABASE_URL:-postgres://postgres:yMC1OeDvyfAILysWMUa6@devdbindiabenefits.cpdsnbqotxlo.us-east-1.rds.amazonaws.com/devdbindiabenefits}
 echo $DATABASE_URL
 npm run export-button-config && npm run export-i18n && npm run generate-api-js
 

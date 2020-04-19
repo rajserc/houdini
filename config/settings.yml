@@ -1,6 +1,6 @@
 # License: CC0-1.0
 general:
-  name: Houdini Project
+  name: India Benefits Project
   logo: "logos/houdini_project_bug.svg"
   logo_full: "logos/houdini_project_full.svg"
   poweredby_logo: "logos/houdini_project_rectangle_150.png"
@@ -23,10 +23,10 @@ aws:
   bucket: <%= ENV['S3_BUCKET_NAME'] %>
 
 mailer:
-  delivery_method: "sendmail"
-  address: "localhost"
-  port: 25
-  host: "http://localhost"
+  delivery_method: "aws_ses"
+  #address: "localhost"
+  #port: 25
+  host: "indiabenefits.online"
 
 cdn:
   url: "http://localhost:5000"
@@ -41,7 +41,7 @@ default_bp:
   id: 1
 
 devise:
-  mailer_sender: 'fake@fake.fake'
+  mailer_sender: 'contact@indiabenefits.online'
 
 page_editor:
   editor: 'quill'
@@ -73,5 +73,5 @@ source_tokens:
 nonprofits_must_be_vetted: false
 
 api_domain:
-  url: "http://localhost:5000"
+  url: "http://indiabenefits.online"
 

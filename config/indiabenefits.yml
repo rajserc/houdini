@@ -11,7 +11,7 @@
 mailer:
   default_from: India Benefits Org Team <support@indiabenefits.online>"
   delivery_method: "aws_ses"
-  host: indiabenefits.online
+  host: "indiabenefits.online"
   email: 'support@indiabenefits.online'
 
 devise:
