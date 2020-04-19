@@ -16,10 +16,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: commitchange_development
+  database: devindiabenefits
   pool: 5
-  username: admin
-  password: password
+  username: postgres
+  password: yMC1OeDvyfAILysWMUa6
   host: <%= ENV['DATABASE_HOST']  || 'localhost' %>
 
 test:
@@ -33,10 +33,10 @@ test:
 ci:
   adapter: postgresql
   encoding: unicode
-  database: commitchange_development
+  database: devindiabenefits
   pool: 5
-  username: admin
-  password: password
+  username: postgres
+  password: yMC1OeDvyfAILysWMUa6
   host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
 
 
@@ -62,15 +62,15 @@ ci:
 production:
   adapter: postgresql
   encoding: unicode
-  database: commitchange_production
+  database: devindiabenefits
   pool: 5
-  username: admin
-  password: password
+  username: postgres
+  password: yMC1OeDvyfAILysWMUa6
 
 staging:
   adapter: postgresql
   encoding: unicode
-  database: commitchange_staging
+  database: devindiabenefits
   pool: 5
-  username: admin
-  password: password
+  username: postgres
+  password: yMC1OeDvyfAILysWMUa6
