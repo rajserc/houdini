@@ -1,0 +1,30 @@
+# License: CC0-1.0
+# This is an example organization configuration file.
+#
+# How to use it:
+# 1. Set an enviroment variable called ORG_NAME
+# 2. Make a copy of this file and rename it to <ORG_NAME>.yml – this will be your
+#   default settings file. You can also create <ORG_NAME>.enviroment.yml which
+#   will overwrite your settings on per enviroment basis.
+# 3. Set your details in the new files et voila!
+
+mailer:
+  default_from: India Benefits Org Team <support@indiabenefits.online>"
+  delivery_method: "aws_ses"
+  host: indiabenefits.online
+  email: 'support@indiabenefits.online'
+
+devise:
+  mailer_sender: "support@indiabenefits.online"
+
+intntl:
+  currencies: ["eur"]
+  eur:
+    unit: "euro"
+    subunit: "cents"
+    symbol: "€"
+    abbv: "eur"
+    format: "%n%u"
+
+api_domain:
+  url: "http://indiabenefits.online"

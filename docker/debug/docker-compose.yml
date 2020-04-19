@@ -10,7 +10,7 @@ services:
     user: ${USER}
 
     environment:
-    - DATABASE_HOST=db
+    - DATABASE_HOST=devdbindiabenefits.cpdsnbqotxlo.us-east-1.rds.amazonaws.com
     - MEMCACHE_SERVERS=memcached
     - USER=${USER}
 
@@ -19,16 +19,16 @@ services:
 
     ports:
     - "5000:5000"
-    depends_on:
-    - db
-    - memcached
-  db:
-    image: postgres:9.6
-    environment:
-      POSTGRES_USER: "admin"
-      POSTGRES_PASSWORD: "password"
-  memcached:
-    image: memcached
+      #depends_on:
+            #    - db
+            #- memcached
+      #  db:
+      #image: postgres:9.6
+      #environment:
+      #POSTGRES_USER: "admin"
+      #POSTGRES_PASSWORD: "password"
+      #memcached:
+      #image: memcached
 
 
 

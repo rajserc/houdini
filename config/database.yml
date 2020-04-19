@@ -25,10 +25,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: commitchange_test
+  database: devindiabenefits
   pool: 5
-  username: admin
-  password: password
+  username: postgres
+  password: yMC1OeDvyfAILysWMUa6
   host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
 ci:
   adapter: postgresql
